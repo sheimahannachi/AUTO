@@ -1,15 +1,15 @@
-package entities;
+package com.example.parc_auto.entities;
 
 import javax.persistence.*;
 
 @Table(name = "tab_administrateur")
 @Entity
-public class admin {
+public class Admin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cin")
-    private Integer cin;
+    private int cin;
 
     @Column(name = "nom")
     private String nom;
@@ -21,16 +21,16 @@ public class admin {
     private String adresse;
 
     @Column(name = "telephone")
-    private Integer telephone;
+    private int telephone;
 
-    public admin() {
+    public Admin() {
     }
 
-    public Integer getCin() {
+    public int getCin() {
         return cin;
     }
 
-    public void setCin(Integer cin) {
+    public void setCin(int cin) {
         this.cin = cin;
     }
 
@@ -58,11 +58,12 @@ public class admin {
         this.adresse = adresse;
     }
 
-    public Integer getTelephone() {
+    public int getTelephone() {
         return telephone;
     }
 
-    public void setTelephone(Integer telephone) {
+    public void setTelephone(int telephone) {
         this.telephone = telephone;
     }
+
 }
